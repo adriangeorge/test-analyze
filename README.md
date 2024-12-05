@@ -1,132 +1,67 @@
-<div align="center"> <a href="https://genezio.com/"></a>
-<img alt="genezio logo" src="https://github.com/genez-io/graphics/raw/HEAD/svg/Icon_Genezio_Black.svg" style="max-height: 50px;">
-
-</div>
+<div align="center"> <a href="https://genezio.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/genez-io/graphics/raw/HEAD/svg/Icon_Genezio_White.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/genez-io/graphics/raw/HEAD/svg/Icon_Genezio_Black.svg">
+    <img alt="genezio logo" src="https://github.com/genez-io/graphics/raw/HEAD/svg/Icon_Genezio_Black.svg" height="100" >
+  </picture>
+ </div>
 
 <div align="center">
-
-[![deployed with: genezio](https://img.shields.io/badge/deployed_with-genezio-6742c1.svg?labelColor=62C353&style=flat)](https://github.com/genez-io/genezio)
 
 [![Join our community](https://img.shields.io/discord/1024296197575422022?style=social&label=Join%20our%20community%20&logo=discord&labelColor=6A7EC2)](https://discord.gg/uc9H5YKjXv)
 [![Follow @geneziodev](https://img.shields.io/twitter/url/https/twitter.com/geneziodev.svg?style=social&label=Follow%20%40geneziodev)](https://twitter.com/geneziodev)
 
 </div>
 
-# Rephrasing Using ChatGPT, Genezio, and ReactJS
+# Genezio TypeSafe Getting Started
 
-In this project, we are creating an application that uses the ChatGPT API. It's backed by Genezio on the server side and features a React.js frontend.
+In the server/ folder, you'll find the backend services that are exposed to the client-side via the project's SDK.
+You can update the backend.ts file to add or modify functions, or create new backend services (new files in the server/ folder).
 
-## Prerequisites
+In the client/ folder, you have a basic React.js app that calls the hello world function from the backend. Check the src/App.tsx file to see how the Genezio project SDK is imported and how the backend function is called.
 
-- ✅ [NodeJs](https://nodejs.org/) >= 18.0.0
-- ✅ [npm](https://genezio.com/)
-- ✅ [genezio](https://genezio.com/)
+Starting from this example, you can add backend functions that access a database for specific content, call other APIs to retrieve data, and then expose all of these in the front end via the same SDK.
 
-Note: We recommend using [nvm]() to install Node.js and npm.
+# Deploy
+:rocket: You can deploy your own version of the template to Genezio with one click:
 
-## Project Structure
+[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/genezio-typesafe-getting-started)
 
-Inside the project folder, you will find the following files and folders:
 
-```
-├── server/
-│   ├── gptCaller.js
-│   └── package.json
-├── client/
-│   ├── dist/
-│   ├── public/
-│   ├── src/
-│   ├── .eslintrc.json
-│   ├── .gitignore
-│   ├── index.html
-│   └── package.json
-│   └── vite.config.js
-├── genezio.yaml
-├── README.md
-├── .genezioignore
-└── tsconfig.json
-```
+## Genezio CLI Commands
 
-Genezio looks for `genezio.yaml` to read the settings for deploying the project or for spinning a local dev server for testing.
-
-The `backend` directory contains the implementation of the server side of the project.
-
-The `frontend` directory contains a React application that talks with the genezio server.
-
-## Run the project
-
-### Clone this example
-
-Clone the repository:
-
-```
-git clone https://github.com/Genez-io/genezio-examples
-```
-
-Navigate to the following directory:
-
-```
-cd ./genezio-examples/javascript/chatgpt-project
-```
-
-### Test your project locally
-
-Test the project locally:
-
-```
-genezio local
-```
-
-Open a new terminal, navigate to the following directory, and run npm start to launch the React application:
-
-```
-cd ./client
-npm run dev
-```
-
-### Deploy your project with genezio
-
-If you wish to deploy your project to the Genezio infrastructure, follow these steps:
-
-Log in to Genezio using the command genezio login:
-
-```
-genezio login
-```
-
-Deploy your project using the genezio deploy command from the `./genezio-examples/javascript/chatgpt-project` directory.
-
-```
-genezio deploy
-```
-
-## Commands
-
+Genezio also provides a CLI tool that you can use to deploy your project from your machine.
 All commands are run from the root of the project, from a terminal:
 
-| Command                  | Action                       |
-| :----------------------- | :--------------------------- |
-| `npm install -g genezio` | Installs genezio globally    |
-| `genezio login`          | Logs in to genezio           |
-| `genezio local`          | Starts a local server        |
-| `genezio deploy`         | Deploys a production project |
-| `genezio --help`         | Get help using genezio       |
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install -g genezio`  | Installs genezio globally                        |
+| `genezio login`           | Logs in to genezio                               |
+| `genezio local`           | Starts a local server                            |
+| `genezio deploy`          | Deploys a production project                     |
+| `genezio --help`          | Get help using genezio                           |
 
-## Want to learn more?
+## Learn more
 
-Check out:
+To learn more about Genezio, take a look at the following resources:
 
 - [Official genezio documentation](https://genezio.com/docs)
-- [Web development tutorials](https://genezio.com/blog)
-- [Discord channel](https://discord.gg/uc9H5YKjXv)
+- [Tutorials](https://genezio.com/blog)
 
 ## Contact
 
-If you need support or you have any questions, please join us in our [Discord channel](). We'd love to chat!
+If you need support or you have any questions, please join us in our [Discord channel](https://discord.gg/uc9H5YKjXv). We'd love to chat!
 
 ## Built With
 
-- [ChatGPT](https://openai.com/blog/openai-api)
 - [Genezio](https://genezio.com/)
-- [React.js](https://github.com/facebook/react)
-- [Vite.js](https://vitejs.dev/)
+- [Node.JS](https://nodejs.org/en/)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+
+***
+
+<div align="center"> <a href="https://genezio.com/">
+  <p>Built with Genezio with ❤️ </p>
+  <img alt="genezio logo" src="https://raw.githubusercontent.com/Genez-io/graphics/main/svg/powered_by_genezio.svg" height="40">
+</div>
